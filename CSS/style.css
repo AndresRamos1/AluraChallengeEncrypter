@@ -1,0 +1,160 @@
+:root {--DarkBlue100: #609ED4;     
+        --DarkBlue200: #356EA9;     
+        --DarkBlue300: #0A3871;     
+        --DarkBlue400: #072B61;     
+        --DarkBlue500: #052051;     
+        --LigthBlue100: #F3F5FC;     
+        --LigthBlue200: #EFF1FA;     
+        --LigthBlue300: #E9ECF8;     
+        --LigthBlue400: #AAB2D5;     
+        --LigthBlue500: #757FB2;     
+        --Gray100: #CED4DA;     
+        --Gray200: #ADB5BD;     
+        --Gray500: #868E96;     
+        --DarkGray400: #495057;     
+        --DarkGray500: #343A40;
+    }
+
+html {
+        font-size: 62.5%;
+        font-family: 'Inter', sans-serif;
+    }
+
+body{
+    background-color: var(--LigthBlue100);
+}
+
+main{
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 2.5% 2.5%;
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+.container-left{
+    width: 72%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 47%;
+}
+
+#text-encrypt{
+    width: 40vw;
+    height: 40vh;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 160px;
+    border: none;
+    line-height: 150%;
+    font-family: 'Inter';
+    color: var(--DarkBlue300);
+    background-color: var(--LigthBlue100);
+    font-size: 32px;
+}
+
+#text-encrypt:focus{
+    outline: none;
+}
+
+#text-encrypt:empty::before{
+    position: absolute;
+    content: "Ingrese el texto aqui";
+}
+
+#text-encrypt::placeholder{
+    color: var(--DarkBlue300);
+    background-color: var(--LigthBlue100);
+    border: 2px solid;
+    border-color: var(--LigthBlue100);
+}
+
+.container-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 2.5% 2.5%;
+}
+#encrypt{
+    width: 80%;
+    height: 5rem;
+    background-color: var(--DarkBlue200);
+    border-radius: 2.5rem;
+    color: var(--LigthBlue100);
+}
+
+#decrypt{
+    width: 80%;
+    height: 5rem;
+    background-color: var(--Gray100);
+    color: var(--DarkBlue300);
+    border-radius: 2.5rem;
+}
+
+.container-right{
+    width: 28%;
+    height: 100%;
+    background-color: #ffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.title-notfound{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+/* or 29px */
+    text-align: center;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    color: #343A40;
+}
+
+.text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+/* or 24px */
+    text-align: center;
+    color: #495057;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

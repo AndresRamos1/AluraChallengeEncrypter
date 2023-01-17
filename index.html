@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <script type="text/javascript" src="encrypt.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container-left">
+            <img id="logo" src="./Assets/Logo.svg"alt="logo">
+            <div class="container-input">
+                <textarea id="text-encrypt" placeholder="Ingrese el texto aqui"></textarea>
+                <div>
+                    <img id="caution" src="./Assets/Caution.svg" alt="caution">
+                    <div class="container-buttons">
+                        <button id="encrypt" type="button" name="button" onclick="encrypt()">Encriptar</button>
+                        <button id="decrypt" type="button" name="button" onclick="decrypt()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <img id="person" src="./Assets/Person.svg" alt="person">
+            <h2 id="title-notfound">Ningún mensaje fue encontrado</h2>
+            <textarea id="text" name="name">Ingresa el texto que desees encriptar o desencriptar.</textarea>
+            <button id="copy" type="button" name="button" onclick="copy()">Copiar</button>
+        </div>
+    </main>
+</body>
+</html>
