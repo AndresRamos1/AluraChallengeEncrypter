@@ -16,17 +16,19 @@
     }
 
 html {
-        font-size: 62.5%;
-        font-family: 'Inter', sans-serif;
-    }
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
 
 body{
+    margin: 0;
+    padding: 0;
     background-color: var(--LigthBlue100);
 }
 
 main{
-    width: 98vw;
-    height: 98vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -48,7 +50,7 @@ main{
 }
 
 .container-left{
-    width: 72%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -59,7 +61,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 47%;
+    width: 680px;
 }
 
 #text-encrypt{
@@ -96,27 +98,30 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 28px;
-    padding: 2.5% 2.5%;
+    gap: 24px;
+    margin-bottom: 32px;
+    margin-top: 16px;
+    align-items: flex-start;
+    padding: 0;
 }
 #encrypt{
-    width: 80%;
-    height: 5rem;
-    background-color: var(--DarkBlue200);
+    width: 328px;
+    height: 67px;
+    background-color: var(--DarkBlue300);
     border-radius: 2.5rem;
     color: var(--LigthBlue100);
 }
 
 #decrypt{
-    width: 80%;
-    height: 5rem;
+    width: 328px;
+    height: 67px;
     background-color: var(--Gray100);
     color: var(--DarkBlue300);
     border-radius: 2.5rem;
 }
 
 .container-right{
-    width: 28%;
+    width: 30%;
     height: 100%;
     background-color: #ffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -126,35 +131,128 @@ main{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 2rem;
 }
 
-.title-notfound{
+#title-notfound{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-/* or 29px */
+    margin: 0 32px 0 32px;
+    padding: 0 20px 0 20px;
+    justify-content: center;
     text-align: center;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+/* or 29px */
     color: #343A40;
 }
 
-.text{
+#text{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    justify-content: center;
+    margin: 0 32px 0 32px;
+    padding: 0 20px 0 20px;
+    margin-top: 12px;
 /* or 24px */
     text-align: center;
     color: #495057;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+}
+
+#copy{
+    display: none;
+}
+
+/* Tablets */
+@media (max-width: 1400px){
+    main{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+    }
+   
+    .container-input{
+        width: 80%;
+    }
+
+    #text-encrypt{
+        width: 100%;
+    }
+
+    .container-left{
+        justify-content: center;
+        width: 100%;
+        height: 85%;
+    }
+
+    .container-bot{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-buttons{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-right{
+        width: 100%;
+        height: auto;
+        padding: 2.5%;
+        box-sizing: border-box;
+    }
+
+    #person{
+        display: none;
+    }
+
+    #title-notfound{
+        font-size: 24px;
+    }
+    #text{
+        font-size: 16px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .container-left{
+        justify-content: center;
+        width: 100%;
+        height: 85%;
+    }
+
+    #logo{
+        left: -30px;
+    }
+
+    .container-input{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #text-encrypt{
+        width: 100%;
+        margin-left: 6%;
+    }
+
+    .container-buttons{
+        flex-direction: column;
+    }
+    
+    #text{
+        font-size: 16px;
+    }
 }
